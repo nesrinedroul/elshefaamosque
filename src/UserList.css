@@ -1,0 +1,91 @@
+.user-list-container {
+    padding: 20px;
+  }
+  
+  .user-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .user-list {
+    margin-top: 20px;
+  }
+  
+  /* Responsive styles for cards */
+  @media (max-width: 768px) {
+    .user-list-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .user-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  .user-list-container {
+    padding: 2px;
+  }
+  
+  .user-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .user-list-table {
+    display: block; /* Default to table */
+  }
+  
+  .user-list-cards {
+    display: none; /* Hidden by default */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .user-list-table {
+      display: none; /* Hide table on small screens */
+    }
+  
+    .user-list-cards {
+      display: block; /* Show cards on small screens */
+    }
+  }
+  .user-list-container {
+    padding: 20px;
+  }
+  
+  .user-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-list-table, .user-list-cards {
+    margin-top: 20px;
+  }
+  .user-list-container {
+    padding: 20px;
+  }
+  
+  .user-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-list-table,
+  .user-list-cards {
+    margin-top: 20px;
+  }
+  
+  .pagination-container {
+    display: flex;
+    justify-content: center; /* Center the pagination */
+    margin-top: 16px; /* Spacing above the pagination */
+  }
+  

@@ -1,0 +1,63 @@
+/* General sidebar styles */
+.sidebar-header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    color: white;
+    background: #5d9edb;
+}
+
+.sidebar-header h2 {
+    margin-left: 16px;
+}
+
+/* Ensure that content next to sidebar shifts correctly */
+.ant-layout {
+    transition: margin-left 0.2s ease-in-out;
+}
+
+@media (max-width: 992px) {
+    .ant-layout {
+        margin-left: 80px; /* Shift content when sidebar is collapsed */
+    }
+}
+
+@media (max-width: 768px) {
+    .ant-layout {
+        margin-left: 0;
+    }
+
+    .custom-sider.mobile-collapsed {
+        display: none;
+    }
+}
+
+.sidebar-header h2 {
+    margin-left: 16px; /* Spacing from the icon */
+}
+
+.ant-menu-item {
+    font-size: 18px;
+}
+
+/* Ensure proper layout behavior on mobile */
+@media (max-width: 768px) {
+    .ant-layout-sider {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        overflow: auto;
+        z-index: 1000; /* Ensure it's above the content */
+    }
+}
+@media (max-width: 368px) {
+    .ant-layout-sider {
+        display: flex;
+        justify-content: flex-end;
+        height: 90%;
+        overflow: auto;
+        z-index: 1000; /* Ensure it's above the content */
+    }
+}

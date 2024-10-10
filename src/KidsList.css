@@ -1,0 +1,51 @@
+.kidslist-layout {
+    min-height: 100vh;
+  }
+  
+  .site-layout {
+    margin-left: 200px;
+  }
+  
+  .kidslist-content {
+    margin: 24px 16px;
+    padding: 24px;
+    background: #fff;
+  }
+  
+  .logo {
+    height: 32px;
+    margin: 16px;
+  }
+  
+  .trigger {
+    padding: 0 24px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    margin-bottom: 20px;
+  }
+  
+  .table-title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .menu-item {
+    color: #fff;
+    text-align: left;
+  }
+  
+  .card-view {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .card-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  

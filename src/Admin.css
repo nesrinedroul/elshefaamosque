@@ -1,0 +1,408 @@
+/* Admin.css */
+
+/* General Layout */
+.layout-content {
+ 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
+  }
+  
+
+  .admin-header {
+   margin-top: 80px;
+    background: #fff;
+    padding: 0 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-header h2 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .admin-stats-container {
+    margin-top: 84px;
+    padding: 0 16px;
+  }
+  
+  .admin-stat-item {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ensure the content below header has padding */
+  .admin-content {
+    margin-top: 70px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  /* Adjust layout when sidebar is collapsed */
+  @media screen and (max-width: 768px) {
+    .admin-header {
+      justify-content: flex-start;
+    }
+  
+    .admin-header h2 {
+      font-size: 1.25rem;
+      margin-left: 16px;
+    }
+  }
+  
+  /* Stat cards should stack vertically on smaller screens */
+  @media screen and (max-width: 576px) {
+    .admin-stats-container {
+      flex-direction: column;
+    }
+  }
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .admin-stats-container {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .admin-stat-item {
+      margin-bottom: 20px; /* To avoid overriding */
+    }
+  
+    .ant-layout-header {
+      flex-direction: column; /* Stack the toggle button and header on top of each other */
+      align-items: center;
+      
+    }
+  
+    .ant-btn-primary {
+      width: 100%; /* Make toggle button responsive */
+    }
+  
+    h2 {
+      font-size: 1.2rem; /* Reduce font size on smaller screens */
+    }
+  }
+  
+  /* For medium screens */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .admin-stats-container {
+      justify-content: center; /* Center stat cards on medium screens */
+    }
+  }
+  .admin-table-container {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    width: 100%; /* Full width of the parent container */
+    margin-top: 20px; /* Add some space above the table */
+}
+/* General adjustments for small screens */
+@media (max-width: 768px) {
+    .admin-table-container {
+        margin: 0; /* Remove margins to utilize full width */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller header font for mobile */
+    }
+
+    .admin-stat-item {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+}
+.dashboard-container1 {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    background-color: #060a0d;
+    color: white;
+    padding: 20px;
+    width: 250px; /* Adjust as needed */
+  }
+  
+  .content {
+    flex: 1; /* Allows content to take the remaining space */
+    padding: 20px;
+    z-index: 1;
+    overflow: auto; /* Ensures scrolling if content is too tall */
+  }
+  
+  .back-button {
+    margin-bottom: 20px;
+  }
+  
+  .table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-title {
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .dashboard-container1 {
+      flex-direction: column; /* Stack vertically on small screens */
+    }
+  
+    .sidebar {
+      width: 100%; /* Full width on mobile */
+    }
+  
+    .content {
+      padding: 10px; /* Adjust padding for mobile */
+    }
+  }
+ 
+
+
+.mobile-sidebar-toggle {
+  display: none;
+}
+
+/* On mobile screens */
+@media (max-width: 768px) {
+ 
+  .collapsed-layout .main-layout {
+      margin-left: 0; /* No margin when sidebar is collapsed */
+  }
+
+  .custom-sider.mobile-collapsed {
+      display: none; /* Hide the sidebar */
+  }
+}
+
+/* Sidebar.css */
+
+/* Adjust sidebar menu items */
+.ant-menu-item {
+  font-size: 16px; /* Increase the font size for better readability */
+}
+
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.admin-content {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: 280px;
+}
+
+.admin-stats-container {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .admin-header h2 {
+    font-size: 16px;
+  }
+
+  .admin-stats-container {
+    flex-direction: column;
+  }
+}
+.admin-kids {
+  padding: 20px;
+}
+
+.students-title {
+  margin-bottom: 20px;
+}
+
+.table-container {
+  display: none; /* Hidden on small screens */
+}
+
+.student-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.student-card {
+  flex: 1 1 calc(33.333% - 20px); /* Adjust to your desired card size */
+  min-width: 200px;
+}
+
+.loading-message, .error-message {
+  color: red;
+  text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .table-container {
+      display: block; /* Show on larger screens */
+  }
+
+  .student-cards {
+      display: none; /* Hide on larger screens */
+  }
+}
+.admin-kids {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Take full width */
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.students-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Table container for larger screens */
+.table-container {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.student-table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Student cards for smaller screens */
+.student-cards {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.student-card {
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .admin-kids {
+    padding: 0px;
+  }
+  /* Show cards for smaller screens */
+  .student-cards {
+    display: flex;
+  }
+
+  /* Hide table on smaller screens */
+  .table-container {
+    display: none;
+  }
+  .students-title {
+      font-size: 20px;
+    }
+  
+    .pagination {
+      font-size: 12px;
+    }
+}
+
+
+@media (max-width: 388px) {
+  .admin-kids {
+    padding: 0px;
+  }
+  /* Show cards for smaller screens */
+  .student-cards {
+    display: flex;
+  }
+
+  /* Hide table on smaller screens */
+ 
+  .students-title {
+      font-size: 20px;
+    }
+  
+    .pagination {
+      font-size: 10px;
+    }
+}
+/* Sidebar.css */
+
+/* Style for the Sider trigger button */
+.ant-layout-sider-trigger {
+    background-color: #091d3c; /* Background color */
+    border: none; /* Remove default border */
+    color: #ffffff; /* Text color */
+    height: 32px; /* Height of the trigger */
+    display: flex; /* Flexbox to center icon */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position the trigger */
+}
+.ant-layout-sider .ant-layout-sider-trigger {
+  position: relative;
+}
+/* Add hover effect */
+.ant-layout-sider-trigger:hover {
+    background-color: #2bfaa7; /* Change background on hover */
+}
+
+
+/* Optional: Adjust icon color */
+.ant-layout-sider-trigger .anticon {
+    color: #ffffff; /* Icon color */
+    
+}
+
+.sidebar-header{
+  margin-top: 110px;
+}
+/* Target Ant Design inline menu items */
+.css-dev-only-do-not-override-ccdg5a .ant-menu-inline.ant-menu-root .ant-menu-item {
+  /* Your custom styles here */
+ 
+  color: #000; /* Example text color */
+  border-radius: 4px; /* Example border radius */
+}
+
+/* Targeting menu items on hover */
+.css-dev-only-do-not-override-ccdg5a .ant-menu-inline.ant-menu-root .ant-menu-item:hover {
+  background-color: #e6f7ff; /* Change background on hover */
+  
+}
+.css-dev-only-do-not-override-ccdg5a .ant-menu-inline.ant-menu-root .ant-menu-item:active{
+  color: #222930; /* Change text color on hover */
+}
+.custom-menu-item {
+  color: white;
+  transition:  0.3s ease;
+}
+
+.custom-menu-item:hover {
+  background-color: #00327d !important; /* Darker background on hover */
+}
+
+.ant-menu-item-selected {
+  background-color: #100386 !important; /* Background color when active */
+  color: white !important;
+}

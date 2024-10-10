@@ -1,0 +1,113 @@
+.admin-kids {
+    padding: 20px;
+}
+
+.students-title {
+    margin-bottom: 20px;
+}
+
+.table-container {
+    display: none; /* Hidden on small screens */
+}
+
+.student-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.student-card {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust to your desired card size */
+    min-width: 200px;
+}
+
+.loading-message, .error-message {
+    color: red;
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .table-container {
+        display: block; /* Show on larger screens */
+    }
+
+    .student-cards {
+        display: none; /* Hide on larger screens */
+    }
+}
+.admin-kids {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Take full width */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .students-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Table container for larger screens */
+  .table-container {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .student-table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Student cards for smaller screens */
+  .student-cards {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .student-card {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+  }
+  
+  .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .admin-kids {
+      padding: 0px;
+    }
+    /* Show cards for smaller screens */
+    .student-cards {
+      display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+    /* Hide table on smaller screens */
+    .table-container {
+      display: none;
+    }
+    .students-title {
+        font-size: 20px;
+      }
+    
+      .pagination {
+        font-size: 12px;
+      }
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center; /* Center the pagination horizontally */
+    margin-top: 20px; /* Add some spacing above the pagination */
+  }
